@@ -5,7 +5,7 @@ import Title from "../components/Title";
 import ProductItem from "../components/ProductItem";
 
 const Collection = () => {
-  const { products } = useContext(ShopContext);
+  const { products, search, showSearch } = useContext(ShopContext);
   const [showFilter, setShowFilter] = useState(false);
   const [filterProducts, setFilterProducts] = useState([]);
   const [category, setCategory] = useState([]);
@@ -30,6 +30,15 @@ const Collection = () => {
 
   const applyFilter = () => {
     let productsCopy = products.slice();
+
+    if(search && showSearch){
+
+      //productsCopy=productsCopy.map((item)=>({...item,tags:item.name+" "+item.description+" "+item.category+" "+item.subCategory}))
+      //.filter((item)=>(item.tags.toLowerCase().includes(search.toLowerCase()) ))
+      
+      productsCopy=productsCopy.filter((item)=>(item.name.toLowerCase().includes(search.toLowerCase()) 
+      || item.description.toLowerCase().includes(search.toLowerCase())))
+    }
 
     if (category.length > 0) {
       productsCopy = productsCopy.filter((item) =>
@@ -64,7 +73,7 @@ const Collection = () => {
 
   useEffect(() => {
     applyFilter();
-  }, [category, subCategory]);
+  }, [category, subCategory, search]);
 
   useEffect(()=>{
     sortProduct();
@@ -73,7 +82,9 @@ const Collection = () => {
   //didnt use useEffect to initialize filterProducts because not needed here
   return (
     <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t">
+
       {/*Filter options */}
+
       <div className="min-w-60">
         <p
           onClick={() => setShowFilter(!showFilter)}
@@ -86,7 +97,9 @@ const Collection = () => {
             alt=""
           />
         </p>
+
         {/*Category Filter */}
+
         <div
           className={`border border-gray-300 pl-5 py-3 mt-6 ${
             showFilter ? "" : "hidden"
@@ -123,6 +136,7 @@ const Collection = () => {
             </p>
           </div>
         </div>
+
         {/*subcategory filter */}
 
         <div
@@ -164,6 +178,7 @@ const Collection = () => {
       </div>
 
       {/*Right side */}
+
       <div className="flex-1">
         <div className="flex justify-between text-base sm:text-2xl mb-4">
           <Title text1={"ALL"} text2={"COLLECTIONS"} />
@@ -179,6 +194,7 @@ const Collection = () => {
         </div>
 
         {/*Map products */}
+
         <div className="grid grid-cols-2 md:grid-cols-3 lg-grid-cols-4 gap-4 gap-y-6">
           {filterProducts.map((item, index) => (
             <ProductItem
