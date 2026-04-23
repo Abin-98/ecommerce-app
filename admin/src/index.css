@@ -3,10 +3,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-main: 'Outfit';
+  --color-active-bg: #ffebf5;
+  --color-active-border: #C586A5;
+  --color-input-border: #c2c2c2;
+  --color-input-outline: #C586A5;
+  --radius-input: 4px;
+}
+
 *{
-    font-family: Outfit;
+    font-family: var(--font-main);
 }
 .active{
-    background-color: #ffebf5;
-    border-color: #C586A5;
+    background-color: var(--color-active-bg);
+    border-color: var(--color-active-border);
+}
+select, input, textarea {
+    border: 1px solid var(--color-input-border);
+    outline-color: var(--color-input-outline);
+    border-radius: var(--radius-input);
 }
