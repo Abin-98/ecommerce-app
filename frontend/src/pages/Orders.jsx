@@ -53,7 +53,7 @@ const Orders = () => {
           orderData.map((item, index)=>(
             <div key={index} className="py-4 border-t border-b flex flex-col text-gray-700 md:flex-row md:items-center md:justify-between gap-4">
                 <div className="flex items-start gap-6 text-sm">
-                  <img className="w-16 sm:w-20" src={item.image[0]} alt="" />
+                  <img className="w-16 sm:w-20" src={item.image[0]} alt="product_image" />
                   <div>
                     <p className="sm:text-base font-medium">{item.name}</p>
                     <div className="flex items-center gap-3 mt-1 text-base text-gray-700">
@@ -61,8 +61,8 @@ const Orders = () => {
                       <p>Quantity: {item.quantity}</p>
                       <p>Size: {item.size}</p>
                     </div>
-                    <p className="mt-1">Date: <span className="text-gray-400">{new Date(item.date).toDateString()}</span></p>
-                    <p className="mt-1">Payment: <span className="text-gray-400">{item.paymentMethod}</span></p>
+                    <p className="mt-1">Date: <span className="text-gray-600">{new Date(item.date).toDateString()}</span></p>
+                    <p className="mt-1">Payment: <span className="text-gray-600">{item.paymentMethod}</span></p>
                   </div>
                 </div>
                 <div className="md:w-1/2 flex justify-between">

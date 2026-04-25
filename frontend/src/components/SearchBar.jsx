@@ -27,9 +27,9 @@ const [visible,setVisible]=useState(false);
             value={search}
             onChange={(e)=>setSearch(e.target.value)}
           />
-          <img className="w-4" src={assets.search_icon} alt="" />
+          <img className="w-4" src={assets.search_icon} alt="search_icon" />
         </div>
-        <img onClick={()=>setShowSearch(false)} className="inline w-3 cursor-pointer" src={assets.cross_icon} alt="" />
+        <img onClick={()=>setShowSearch(false)} className="inline w-3 cursor-pointer" src={assets.cross_icon} alt="cross_icon" />
       </div>
   ) : null)
 };
