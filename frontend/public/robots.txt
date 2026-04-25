@@ -1,0 +1,10 @@
+# Allow all crawlers to index the main site
+User-agent: *
+Allow: /
+
+# Prevent indexing of sensitive/admin routes
+Disallow: /admin
+Disallow: /api
+
+# Point crawlers to your sitemap (update with your actual deployed URL)
+Sitemap: https://forever-frontend-4wo3fhavy-abin-98s-projects.vercel.app/sitemap.xml
