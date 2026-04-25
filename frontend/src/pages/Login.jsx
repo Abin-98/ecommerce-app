@@ -67,7 +67,7 @@ const Login = () => {
           onClick={() => setShowPassword(!showPassword)}
           className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-gray-600"
         >
-          {showPassword ? <img className='w-4 h-4' src={assets.eye_slash_solid} alt="" /> : <img className='w-4 h-4' src={assets.eye_solid} alt="" />}
+          {showPassword ? <img className='w-4 h-4' src={assets.eye_slash_solid} alt="eye_slash_solid" /> : <img className='w-4 h-4' src={assets.eye_solid} alt="eye_solid" />}
         </span>
       </div>
 
