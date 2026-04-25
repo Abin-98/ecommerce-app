@@ -75,5 +75,16 @@ Admin Panel - https://forever-admin-panel-delta.vercel.app/
 
 📸 Screenshots
 - Homepage with product listing
+- <img width="1912" height="865" alt="image" src="https://github.com/user-attachments/assets/c999f33c-5de4-4e91-ab71-c8975f945440" />
+
+- <img width="1901" height="869" alt="image" src="https://github.com/user-attachments/assets/b7357711-ae48-4b7b-9627-316bf3d49b80" />
+
 - Cart & Checkout flow
+- <img width="1914" height="866" alt="image" src="https://github.com/user-attachments/assets/4b1d70e7-5ddf-40d9-8e44-9996285ac982" />
+<img width="1904" height="874" alt="image" src="https://github.com/user-attachments/assets/ea763f87-7b58-4dec-afe9-d53ac8667c57" />
+
+
 - Admin dashboard
+- <img width="1900" height="870" alt="image" src="https://github.com/user-attachments/assets/47f48bec-d19d-4ab8-ab17-e0e354329dcd" />
+<img width="1896" height="856" alt="image" src="https://github.com/user-attachments/assets/1e5d6854-1380-494b-982e-e370bd317f4c" />
+
