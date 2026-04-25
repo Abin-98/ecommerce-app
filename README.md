@@ -1,7 +1,20 @@
 # 🛒 MERN eCommerce Website
 
+![React](https://img.shields.io/badge/Frontend-React-blue?logo=react)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-green?logo=node.js)
+![Express](https://img.shields.io/badge/API-Express-lightgrey?logo=express)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen?logo=mongodb)
+![Stripe](https://img.shields.io/badge/Payments-Stripe-635bff?logo=stripe)
+![Razorpay](https://img.shields.io/badge/Payments-Razorpay-darkblue?logo=razorpay)
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel)
+
+
 A full-stack eCommerce application built with the **MERN stack (MongoDB, Express.js, React.js, Node.js)** and deployed on **Vercel**.  
 This project demonstrates how to build and deploy a modern online store with product browsing, cart management, checkout, and admin dashboard functionality.
+
+sample login details: 
+Email: user.gssde@gmail.com
+Password: qwerty123
 
 ---
 
@@ -36,7 +49,32 @@ This project demonstrates how to build and deploy a modern online store with pro
 ---
 
 ## 📂 Project Structure
-ecommerce-app/ │── backend/        # Node.js + Express API │── frontend/       # React + Vite frontend │── .env            # Environment variables │── package.json    # Dependencies and scripts
+📦 ecommerce-app
+├── 📂 backend
+│   ├── 📂 controllers        # Business logic (products, orders, users)
+│   ├── 📂 models             # Mongoose schemas (Product, User, Order)
+│   ├── 📂 routes             # API endpoints (auth, products, orders, payments)
+│   ├── 📂 middleware         # Auth, error handling
+│   ├── 📂 config             # DB connection, Stripe/Razorpay setup
+│   ├── server.js             # Backend entry point
+│   └── package.json          # Backend dependencies
+│
+├── 📂 frontend
+│   ├── 📂 src
+│   │   ├── 📂 components     # Reusable UI components
+│   │   ├── 📂 pages          # Page-level views (Home, Cart, Checkout, Admin)
+│   │   ├── 📂 routes         # React Router setup
+│   │   ├── 📂 context        # Global state (cart, auth)
+│   │   ├── 📂 services       # Axios API calls
+│   │   ├── App.jsx           # Root component
+│   │   └── main.jsx          # Entry point
+│   ├── 📂 public             # Static assets
+│   └── package.json          # Frontend dependencies
+│
+├── .env                      # Environment variables (Mongo URI, API keys)
+├── vercel.json               # Vercel deployment config
+├── README.md                 # Documentation
+└── package.json              # Root config (optional if split frontend/backend)
 
 ---
 
